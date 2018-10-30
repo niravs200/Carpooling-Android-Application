@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Project_Carpool</string>
+    <string name="user">User</string>
+    <string name="driver">Driver</string>
+    <string name="accept">YOUR RIDE OFFER HAS BEEN ACCEPTED! POOLER DETAILS: </string>
+    <string name="name">NAME : </string>
+</resources>
