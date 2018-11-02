@@ -1,0 +1,15 @@
+https://www.youtube.com/watch?v=qMr2ut1k1YQ
+https://stackoverflow.com/questions/7510219/deleting-row-in-sqlite-in-android
+https://stackoverflow.com/questions/9798473/sqlite-in-android-how-to-update-a-specific-row
+https://thebhwgroup.com/blog/how-android-sqlite-onupgrade
+https://git-scm.com/book/en/v2/Getting-Started-Installing-Git
+https://www.atlassian.com/git/tutorials/comparing-workflows
+https://www.visual-paradigm.com/tutorials/android-wireframe.jsp
+
+
+GIT All commands help:
+https://confluence.atlassian.com/bitbucketserver/basic-git-commands-776639767.html
+
+GIT Workflow help:
+https://www.atlassian.com/git/tutorials/comparing-workflows
+https://www.atlassian.com/git/tutorials/comparing-workflows/feature-branch-workflow
