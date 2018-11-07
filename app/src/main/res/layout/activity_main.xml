@@ -13,8 +13,7 @@
         android:layout_height="0dp"
         android:layout_weight="0.30"
         android:gravity="center"
-        android:orientation="vertical"
-        >
+        android:orientation="vertical">
 
 
         <ImageView
@@ -23,7 +22,6 @@
             android:layout_height="match_parent"
             android:layout_gravity="bottom"
             android:layout_margin="50dp"
-
             app:srcCompat="@drawable/final1" />
     </LinearLayout>
 
@@ -44,7 +42,6 @@
             android:layout_marginTop="100dp"
             android:layout_weight="0.25"
             android:textSize="30sp"
-
             android:backgroundTint="@color/Yellow"/>
 
         <Button
