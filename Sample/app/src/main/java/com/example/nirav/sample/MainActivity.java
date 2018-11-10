@@ -13,6 +13,7 @@ import com.android.volley.toolbox.JsonObjectRequest;
 import com.android.volley.toolbox.Volley;
 import com.example.nirav.sample.model.Data;
 import com.google.gson.Gson;
+import com.google.gson.JsonObject;
 
 import org.json.JSONArray;
 import org.json.JSONException;
@@ -20,7 +21,7 @@ import org.json.JSONObject;
 
 public class MainActivity extends AppCompatActivity {
 
-
+    RequestQueue requestQueue;
     TextView a;
 
     @Override
@@ -29,15 +30,31 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         a = findViewById(R.id.test);
 
+        requestQueue = Volley.newRequestQueue(getApplicationContext());
+        String url = "http://192.168.5.39:81/carpool_PHP/display.php"; // change IP to your machine IP
 
-        String url = "http://134.190.177.20/carpool/test.php";
-
-        JsonObjectRequest test = new JsonObjectRequest(Request.Method.GET, url, null, new Response.Listener<JSONObject>() {
+        JsonObjectRequest test = new JsonObjectRequest(Request.Method.POST, url, null, new Response.Listener<JSONObject>() {
             @Override
             public void onResponse(JSONObject response) {
+                try {
+                    JSONArray users = response.getJSONArray("users");
+                    for(int i = 0; i<users.length(); i++){
+                        JSONObject user = users.getJSONObject(i);
 
-                Data data = new Gson().fromJson(response.toString(), Data.class);
-                a.setText(data.getT1().get(0).getTP());
+                        String name = user.getString("name");
+                        String phone = user.getString("phone");
+                        String password = user.getString("password");
+
+                        a.setText(name + " " + phone +" "+ password);
+                    }
+                } catch (JSONException e) {
+                    e.printStackTrace();
+                }
+               // Data data = new Gson().fromJson(response.toString(), Data.class);
+                //a.setText(data.getUser().get(0).getId());
+                //a.setText(data.getUser().get(0).getName());
+                //a.setText(data.getUser().get(0).getPhone());
+                //a.setText(data.getUser().get(0).getPassword());
             }
         }, new Response.ErrorListener() {
             @Override
@@ -46,7 +63,8 @@ public class MainActivity extends AppCompatActivity {
             }
         }
         );
-        RequestQueue queue = Volley.newRequestQueue(this);
-        queue.add(test);
+        requestQueue.add(test);
+        //RequestQueue queue = Volley.newRequestQueue(this);
+        //queue.add(test);
     }
 }
