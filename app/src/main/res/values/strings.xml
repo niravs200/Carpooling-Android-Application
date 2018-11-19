@@ -7,4 +7,6 @@
     <string name="waiting">Waiting...</string>
     <string name="Accept">ACCEPT</string>
     <string name="Reject">REJECT</string>
+    <string name="Next">NEXT</string>
+    <string name="Reset">RESET</string>
 </resources>
