@@ -31,7 +31,7 @@ public class Login extends AppCompatActivity {
     public EditText userPassword;
     public boolean result;
 
-    String url = "http://192.168.43.9/carpool/login.php";
+    String url = "http://192.168.2.12/carpool/login.php";
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -39,7 +39,6 @@ public class Login extends AppCompatActivity {
 
         userName = findViewById(R.id.userName);
         userPassword = findViewById(R.id.userPassword);
-
         buttonLogin = findViewById(R.id.buttonLogin);
         tvpassword = findViewById(R.id.forgotpassword);
         tvnewuser = findViewById(R.id.register);
@@ -54,13 +53,12 @@ public class Login extends AppCompatActivity {
                     @Override
                     public void onResponse(JSONObject response) {
                         try {
-
+                            Toast.makeText(Login.this, "heyyy", Toast.LENGTH_SHORT).show();
                             //JSONObject r = new JSONObject(response);
-                            boolean output = response.getBoolean("success");
-                            Toast.makeText(Login.this, String.valueOf(output), Toast.LENGTH_SHORT).show();
-                            if(output){
+                            String output = response.getString("success");
+                            Toast.makeText(Login.this, userPassword.getText().toString(), Toast.LENGTH_SHORT).show();
+                            if(output.equals("true")){
                                 Toast.makeText(Login.this, "Success", Toast.LENGTH_SHORT).show();
-
                             }
                             else{
                                 Toast.makeText(Login.this, "Login Failed", Toast.LENGTH_SHORT).show();
@@ -76,8 +74,8 @@ public class Login extends AppCompatActivity {
 
                     }
                 });
-                //Intent intent1 = new Intent(Login.this, Home.class);
-                //startActivity(intent1);
+                Intent intent1 = new Intent(Login.this, Home.class);
+                startActivity(intent1);
                 RequestQueueSingleton.getInstance().getRequestQueue().add(login_url);
 
 

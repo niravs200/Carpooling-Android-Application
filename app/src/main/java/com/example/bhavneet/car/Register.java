@@ -31,7 +31,7 @@ public class Register extends AppCompatActivity {
     public EditText name;
     public EditText password;
     public EditText contactNo;
-    String url = "http://192.168.43.9/carpool/insert.php";
+    String url = "http://192.168.2.12/carpool/insert.php";
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
