@@ -12,22 +12,18 @@
         <activity
             android:name=".Home"
             android:label="@string/app_name"
-            android:theme="@style/AppTheme.NoActionBar"></activity>
+            android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name=".DriverActivity1"
-            android:label="@string/title_activity_gallery"
+            android:label="Driver Home"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
-            android:name=".Tools"
-            android:label="@string/title_activity_tools"
-            android:theme="@style/AppTheme.NoActionBar" />
-        <activity
-            android:name=".Slideshow"
-            android:label="@string/title_activity_slideshow"
+            android:name=".Help"
+            android:label="Help"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name=".UserActivity1"
-            android:label="@string/title_activity_import"
+            android:label="@string/user_home"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity android:name=".Login">
             <intent-filter>
@@ -37,7 +33,9 @@
             </intent-filter>
         </activity>
         <activity android:name=".Register" />
-        <activity android:name=".PoolerList"></activity>
+        <activity android:name=".PoolerList" />
+        <activity android:name=".ForgotPassword" />
+        <activity android:name=".UpdatePassword"></activity>
     </application>
 
 </manifest>

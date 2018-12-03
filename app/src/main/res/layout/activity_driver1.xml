@@ -14,6 +14,11 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent" />
 
+    <include
+        layout="@layout/content_driverhome"
+        android:layout_height="match_parent"
+        android:layout_width="match_parent"/>
+
     <android.support.design.widget.NavigationView
         android:id="@+id/nav_view"
         android:layout_width="wrap_content"
@@ -23,153 +28,7 @@
         app:headerLayout="@layout/nav_header_home"
         app:menu="@menu/activity_home_drawer" />
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="16dp"
-        android:layout_marginTop="10dp"
-        android:layout_marginRight="16dp"
-        android:layout_weight=".12"
-        android:orientation="vertical">
 
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="60dp"
-            android:layout_marginBottom="15dp"
-            android:layout_centerInParent="true"
-            android:typeface="serif"
-            android:gravity="center"
-            android:text="Enter Ride Details"
-            android:textColor="#000000"
-            android:textSize="30sp" />
-
-
-
-
-
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-
-            android:layout_marginTop="10dp"
-            android:layout_marginBottom="8dp"
-            android:layout_marginLeft="20dp"
-            android:typeface="serif"
-            android:gravity="left"
-            android:text="@string/starting_location"
-            android:textColor="#000000"
-            android:textSize="20sp"
-            android:textStyle="bold" />
-
-        <EditText
-            android:id="@+id/etpickup"
-            android:layout_width="fill_parent"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center_horizontal"
-            android:layout_marginLeft="20dp"
-            android:layout_marginRight="20dp"
-            android:layout_marginBottom="8dp"
-            android:background="@drawable/rectangle"
-            android:typeface="serif"
-            android:digits="adcefghijklmnopqrstuvwxyz0123456789"
-            android:textColor="#FFFFFF"
-            android:textSize="20sp"
-            android:textStyle="bold" />
-
-
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_centerInParent="true"
-            android:layout_marginBottom="8dp"
-            android:layout_marginTop="10dp"
-            android:layout_marginLeft="20dp"
-            android:typeface="serif"
-            android:gravity="left"
-            android:text="@string/ending_location"
-            android:textColor="#000000"
-            android:textSize="20sp"
-            android:textStyle="bold" />
-
-        <EditText
-            android:id="@+id/etdrop"
-            android:layout_width="fill_parent"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center_horizontal"
-            android:layout_marginLeft="20dp"
-            android:layout_marginRight="20dp"
-            android:layout_marginBottom="8dp"
-            android:background="@drawable/rectangle"
-            android:digits="adcefghijklmnopqrstuvwxyz0123456789"
-            android:typeface="serif"
-            android:textColor="#FFFFFF"
-            android:textSize="20sp"
-            android:textStyle="bold" />
-
-
-
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_centerInParent="true"
-            android:layout_marginTop="10dp"
-
-            android:typeface="serif"
-            android:gravity="center"
-            android:text="PICKUP TIME:"
-            android:textColor="#000000"
-            android:textSize="20sp"
-            android:textStyle="bold" />
-
-        <TimePicker
-            android:id="@+id/tp"
-            android:layout_width="wrap_content"
-            android:layout_gravity="center_horizontal"
-
-            android:typeface="serif"
-            android:gravity="center"
-            android:layout_height="wrap_content"
-            android:timePickerMode="spinner" />
-
-
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_centerInParent="true"
-            android:layout_marginBottom="8dp"
-            android:typeface="serif"
-            android:gravity="center"
-            android:text="CAPACITY:"
-            android:textColor="#000000"
-            android:textSize="20sp"
-            android:textStyle="bold" />
-
-        <Spinner
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center_horizontal"
-            android:id="@+id/capacity"></Spinner>
-
-
-
-        <Button
-            android:id="@+id/buttonRequestRide"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center_horizontal"
-            android:layout_marginTop="10dp"
-            android:layout_marginLeft="75dp"
-            android:layout_marginRight="75dp"
-            android:layout_marginBottom="15dp"
-            android:background="#F6AD1F"
-            android:typeface="serif"
-            android:text="CHECK RIDES"
-            android:textColor="@android:color/black"
-            android:textSize="20sp"
-            android:textStyle="bold" />
-
-    </LinearLayout>
 
 </android.support.v4.widget.DrawerLayout>
     <!-- copy from activity_home and paste it here.-->

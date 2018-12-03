@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">day3</string>
+    <string name="app_name">Poolofy</string>
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
     <string name="nav_header_title">Android Studio</string>
@@ -21,14 +21,19 @@
     <string name="Accept">Accept</string>
     <string name="Reject">Reject</string>
     <string name="Poolify">POOLIFY</string>
-    <string name="starting_location">STARTING LOCATION</string>
-    <string name="ending_location">ENDING LOCATION</string>
+    <string name="starting_location">Starting Location</string>
+    <string name="ending_location">Ending Location</string>
 
     <string name="import1">Import</string>
     <string name="home">Home</string>
     <string name="user_home">User Home</string>
     <string name="driver_home">Driver Home</string>
     <string name="logout">Logout</string>
+    <string name="next">Next</string>
+    <string name="reset">Reset</string>
+    <string name="forgot_password"><u>Forgot Password? Click here to Reset.</u></string>
+    <string name="not_a_member_sign_up_now"><u>Not a member? Sign up now.</u></string>
+
 
 
     <string-array name="numbers">

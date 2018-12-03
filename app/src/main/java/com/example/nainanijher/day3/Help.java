@@ -1,8 +1,9 @@
 package com.example.nainanijher.day3;
 
+
+
 import android.content.Intent;
 import android.os.Bundle;
-import android.view.View;
 import android.support.design.widget.NavigationView;
 import android.support.v4.view.GravityCompat;
 import android.support.v4.widget.DrawerLayout;
@@ -11,14 +12,10 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.widget.AdapterView;
-import android.widget.ArrayAdapter;
-import android.widget.Button;
-import android.widget.Spinner;
 import android.widget.Toast;
 
-public class DriverActivity1 extends AppCompatActivity
-        implements NavigationView.OnNavigationItemSelectedListener, AdapterView.OnItemSelectedListener {
+public class Help extends AppCompatActivity
+        implements NavigationView.OnNavigationItemSelectedListener {
 
     DrawerLayout drawer;
     NavigationView navigationView;
@@ -27,28 +24,12 @@ public class DriverActivity1 extends AppCompatActivity
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_driver1);
-
-        Spinner capacity = findViewById(R.id.capacity);
-        ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this, R.array.numbers,android.R.layout.simple_spinner_item);
-        adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
-        capacity.setAdapter(adapter);
-        capacity.setOnItemSelectedListener(this);
-
+        setContentView(R.layout.activity_help);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
-        Button btnPoolers = findViewById(R.id.buttonRequestRide);
-        btnPoolers.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-
-                Intent myintent = new Intent(DriverActivity1.this, PoolerList.class);
-                startActivity(myintent);
-
-            }
-        });
         //We dont need this.
+
 
 
 
@@ -104,20 +85,20 @@ public class DriverActivity1 extends AppCompatActivity
 
 
             case R.id.nav_userhome:
-                Intent i= new Intent(DriverActivity1.this,UserActivity1.class);
+                Intent i= new Intent(Help.this,UserActivity1.class);
                 startActivity(i);
                 break;
             case R.id.nav_driverhome:
-                Intent g= new Intent(DriverActivity1.this,DriverActivity1.class);
+                Intent g= new Intent(Help.this,DriverActivity1.class);
                 startActivity(g);
                 break;
             case R.id.nav_help:
-                Intent s= new Intent(DriverActivity1.this,Help.class);
+                Intent s= new Intent(Help.this,Help.class);
                 startActivity(s);
                 break;
             case R.id.nav_tools:
-                Intent t= new Intent(DriverActivity1.this,Login.class);
-                Toast.makeText(DriverActivity1.this, "You are being logged out. Kindly Login again!", Toast.LENGTH_SHORT).show();
+                Intent t= new Intent(Help.this,Login.class);
+                Toast.makeText(Help.this, "You are being logged out. Kindly Login again!", Toast.LENGTH_SHORT).show();
                 startActivity(t);
                 break;
 
@@ -131,15 +112,5 @@ public class DriverActivity1 extends AppCompatActivity
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         drawer.closeDrawer(GravityCompat.START);
         return true;
-    }
-
-    @Override
-    public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
-        String value = adapterView.getItemAtPosition(i).toString();
-    }
-
-    @Override
-    public void onNothingSelected(AdapterView<?> adapterView) {
-
     }
 }

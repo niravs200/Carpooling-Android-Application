@@ -37,13 +37,13 @@ public class Login extends AppCompatActivity {
             }
         });
 
-       /* tvpassword.setOnClickListener(new View.OnClickListener() {
+        tvpassword.setOnClickListener(new View.OnClickListener() {
             public void onClick(View view) {
                 Intent intent2 = new Intent(Login.this, ForgotPassword.class);
                 startActivity(intent2);
             }
         });
-*/
+
         tvnewuser.setOnClickListener(new View.OnClickListener() {
             public void onClick(View view) {
                 Intent intent = new Intent(Login.this, Register.class);

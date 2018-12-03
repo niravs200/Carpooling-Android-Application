@@ -1,8 +1,6 @@
 package com.example.nainanijher.day3;
 import android.content.Intent;
 import android.os.Bundle;
-import android.support.design.widget.FloatingActionButton;
-import android.support.design.widget.Snackbar;
 import android.view.View;
 import android.support.design.widget.NavigationView;
 import android.support.v4.view.GravityCompat;
@@ -21,8 +19,7 @@ public class Home extends AppCompatActivity
     DrawerLayout drawer;
     NavigationView navigationView;
     Toolbar toolbar=null;
-
-
+    MenuItem ii;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -61,14 +58,21 @@ public class Home extends AppCompatActivity
 
 
 
-        drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
+        drawer =  findViewById(R.id.drawer_layout);
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
                 this, drawer, toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close);
-        drawer.setDrawerListener(toggle);
+        drawer.addDrawerListener(toggle);
         toggle.syncState();
 
-        navigationView = (NavigationView) findViewById(R.id.nav_view);
+        navigationView = findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
+//        findViewById(R.id.nav_home).setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View view) {
+//                Intent s= new Intent(Home.this,Help.class);
+//                startActivity(s);
+//            }
+//        });
     }
 
     @Override
@@ -103,33 +107,37 @@ public class Home extends AppCompatActivity
         return super.onOptionsItemSelected(item);
     }
 
-    @SuppressWarnings("StatementWithEmptyBody")
+    //@SuppressWarnings("StatementWithEmptyBody")
+
     @Override
     public boolean onNavigationItemSelected(MenuItem item) {
         // Handle navigation view item clicks here.
         //here is the main place where we need to work on.
+
         int id=item.getItemId();
+        item.setChecked(true);
         switch (id){
 
-            case R.id.nav_home:
-                Intent h= new Intent(Home.this,Home.class);
-                startActivity(h);
-                break;
-            case R.id.nav_import:
+
+            case R.id.nav_userhome:
                 Intent i= new Intent(Home.this,UserActivity1.class);
                 startActivity(i);
                 break;
-            case R.id.nav_gallery:
+            case R.id.nav_driverhome:
                 Intent g= new Intent(Home.this,DriverActivity1.class);
                 startActivity(g);
                 break;
-            case R.id.nav_slideshow:
-                Intent s= new Intent(Home.this,Slideshow.class);
+            case R.id.nav_help:
+                Intent s= new Intent(Home.this,Help.class);
                 startActivity(s);
+                break;
             case R.id.nav_tools:
-                Intent t= new Intent(Home.this,Tools.class);
+                Intent t= new Intent(Home.this,Login.class);
+                Toast.makeText(Home.this, "You are being logged out. Kindly Login again!", Toast.LENGTH_SHORT).show();
+
                 startActivity(t);
                 break;
+
 
         }
 
