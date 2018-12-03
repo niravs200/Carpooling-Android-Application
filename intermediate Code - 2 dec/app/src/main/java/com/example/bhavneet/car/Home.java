@@ -39,7 +39,7 @@ public class Home extends AppCompatActivity
                @Override
                public void onClick(View v) {
               try{
-                   Intent myintent = new Intent(Home.this, UserActivity1.class);
+                   Intent myintent = new Intent(Home.this, UserHomeActivity.class);
                    myintent.putExtra("username",name);
                    startActivity(myintent);
 

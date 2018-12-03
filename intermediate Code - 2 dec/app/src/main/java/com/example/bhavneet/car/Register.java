@@ -4,6 +4,8 @@ package com.example.bhavneet.car;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.telephony.PhoneNumberUtils;
+import android.util.Patterns;
 import android.view.View;
 import android.widget.Button;
 
@@ -30,8 +32,9 @@ public class Register extends AppCompatActivity {
     public Button btnregister;
     public EditText name;
     public EditText password;
+    public EditText confirmPassword;
     public EditText contactNo;
-    String url = "http://192.168.2.12/carpool/insert.php";
+    String url = "http://192.168.43.34/carpool/insert.php";
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -39,13 +42,22 @@ public class Register extends AppCompatActivity {
 
         name = findViewById(R.id.etname);
         password = findViewById(R.id.etPassword);
+        confirmPassword = findViewById(R.id.etConfirmPassword);
         contactNo = findViewById(R.id.etContact);
 
         btnregister = findViewById(R.id.buttonRegister);
 
         btnregister.setOnClickListener(new View.OnClickListener() {
             public void onClick(View view) {
-                validateUserData();
+
+                if((password.getText().toString().equals(confirmPassword.getText().toString())) && Patterns.PHONE.matcher(contactNo.getText().toString()).matches()) {
+                    validateUserData();
+                    Intent intent = new Intent(Register.this, Login.class);
+                    startActivity(intent);
+                }
+                else{
+                    Toast.makeText(Register.this, "Please check the details entered!", Toast.LENGTH_SHORT).show();
+                }
 
                 /*HashMap<String,String> params = new HashMap<String,String>();
                 params.put("name",name.getText().toString());
@@ -55,9 +67,7 @@ public class Register extends AppCompatActivity {
                 JSONObject jsonObj = new JSONObject(params);*/
 
 
-                Intent intent = new Intent(Register.this, Login.class);
 
-                startActivity(intent);
             }
         });
     }

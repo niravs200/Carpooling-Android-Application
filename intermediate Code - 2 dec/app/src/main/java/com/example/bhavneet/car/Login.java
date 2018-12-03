@@ -31,7 +31,7 @@ public class Login extends AppCompatActivity {
     public EditText userPassword;
     public boolean result;
 
-    String url = "http://192.168.2.12/carpool/login.php";
+    String url = "http://192.168.43.34/carpool/login.php";
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

@@ -40,7 +40,7 @@ public class UpdateUserDetails extends AppCompatActivity {
     public void execute(){
 
         //requestQueue = Volley.newRequestQueue(this);
-        String url = "http://192.168.2.12/carpool/insert_list.php?name=" + name.getText().toString()+"&driverName=" + driverName;
+        String url = "http://192.168.43.34/carpool/insert_list.php?name=" + name.getText().toString()+"&driverName=" + driverName;
 
         //HashMap<String,String> params = new HashMap<String,String>();
         //params.put("name",name.getText().toString());

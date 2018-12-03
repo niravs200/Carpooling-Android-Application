@@ -26,48 +26,32 @@ import java.util.TimerTask;
 public class DisplayRideDetails extends AppCompatActivity {
 
     String name;
-    String url = "http://192.168.2.12/carpool/display_ride_details.php";
+    String driverName;
+    String dcontactNo;
+    //String url = "http://172.20.10.2/carpool/display_ride_details.php";
     TextView dName;
     TextView contactNo;
-    TextView pickupLocation;
+
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.ride_accepted);
         Intent in = getIntent();
         name = in.getStringExtra("username");
+        driverName = in.getStringExtra("dName");
+        dcontactNo = in.getStringExtra("contactNo");
         dName = findViewById(R.id.etname);
         contactNo = findViewById(R.id.etcontact);
-        pickupLocation = findViewById(R.id.etpickup);
 
-        //Toast.makeText(this, name, Toast.LENGTH_SHORT).show();
-        url = url+"?name="+name;
-        //Toast.makeText(DisplayRideDetails.this, url, Toast.LENGTH_SHORT).show();
-        StringRequest display_url = new StringRequest(Request.Method.GET, url, new Response.Listener<String>() {
-            @Override
-            public void onResponse(String response) {
-
-                    //Toast.makeText(DisplayRideDetails.this, "yeah", Toast.LENGTH_SHORT).show();
-                        //dName.setText(response);
-
-                        String[] output = response.split(",");
-                        dName.setText(output[0]+' ');
-                        contactNo.setText(output[1]+' ');
+        dName.setText(driverName+' ');
+        contactNo.setText(dcontactNo+' ');
 
 
 
 
-                }
-                }, new Response.ErrorListener() {
-                    @Override
-                    public void onErrorResponse(VolleyError error) {
-
-                    }
-                });
+        }
 
 
-                RequestQueueSingleton.getInstance().getRequestQueue().add(display_url);
-       // timer.schedule(task, 0, 60000); // 60000 is time in ms
 
 
 
@@ -79,4 +63,4 @@ public class DisplayRideDetails extends AppCompatActivity {
 
 
     }
-}
+

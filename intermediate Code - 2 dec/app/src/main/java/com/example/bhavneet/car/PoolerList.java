@@ -42,7 +42,7 @@ public class PoolerList extends AppCompatActivity {
         a.setAdapter(adapter);
 
         //requestQueue = Volley.newRequestQueue(getApplicationContext());
-        String url = "http://192.168.2.12/carpool/display.php"; // change IP to your machine IP
+        String url = "http://192.168.43.34/carpool/display.php"; // change IP to your machine IP
 
         JsonObjectRequest test = new JsonObjectRequest(Request.Method.GET, url, null, new Response.Listener<JSONObject>() {
             @Override
