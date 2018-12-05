@@ -4,8 +4,10 @@ package com.example.nainanijher.project_carpool;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.TimePicker;
 
@@ -14,6 +16,7 @@ import java.util.Calendar;
 public class useractivity1 extends AppCompatActivity {
 
     public Button buttonRequestRide;
+    ImageView img;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -25,7 +28,7 @@ public class useractivity1 extends AppCompatActivity {
         int second = c.get(c.SECOND); //Current Second
         final TextView tv = (TextView) findViewById(R.id.tv);
         TimePicker tp = (TimePicker) findViewById(R.id.tp);
-
+        img = findViewById(R.id.btn);
         tv.setText("Initial Time\n | " + hourOfDay + ":" + minute + ":" + second);
 
         //Set a TimeChangedListener for TimePicker widget
@@ -34,6 +37,13 @@ public class useractivity1 extends AppCompatActivity {
             public void onTimeChanged(TimePicker view, int hourOfDay, int minute) {
                 //Display the new time to app interface
                 tv.setText("Time changed\n | "+hourOfDay + ":" + minute);
+            }
+        });
+        img.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent myintent = new Intent(useractivity1.this, MainActivity.class);
+                startActivity(myintent);
             }
         });
 
@@ -47,6 +57,7 @@ public class useractivity1 extends AppCompatActivity {
             }
         });
     }
+
 }
 
 

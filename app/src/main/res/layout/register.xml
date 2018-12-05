@@ -1,12 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/bg_image4"
     android:orientation="vertical"
-    tools:context=".MainActivity">
+    tools:context=".Register">
 
+    <!-- setting the application logo-->
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -24,6 +26,7 @@
             android:src="@drawable/final1" />
     </LinearLayout>
 
+    <!-- layout for entering user details required for registeration-->
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -37,7 +40,6 @@
             android:layout_height="wrap_content"
             android:layout_centerInParent="true"
             android:layout_marginBottom="8dp"
-            android:fontFamily="@font/roboto"
             android:gravity="left"
             android:text="NAME:"
             android:textColor="#000000"
@@ -53,8 +55,7 @@
             android:layout_marginRight="5dp"
             android:layout_marginBottom="8dp"
             android:background="@drawable/rectangle"
-            android:fontFamily="@font/roboto"
-            android:digits="adcefghijklmnopqrstuvwxyz"
+            android:digits="abdcefghijklmnopqrstuvwxyz"
             android:textColor="#FFFFFF"
             android:textSize="20sp"
             android:textStyle="bold" />
@@ -64,7 +65,6 @@
             android:layout_height="wrap_content"
             android:layout_centerInParent="true"
             android:layout_marginBottom="8dp"
-            android:fontFamily="@font/roboto"
             android:gravity="left"
             android:text="PASSWORD:"
             android:textColor="#000000"
@@ -72,7 +72,7 @@
             android:textStyle="bold" />
 
         <EditText
-            android:id="@+id/etcontact"
+            android:id="@+id/etPassword"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
@@ -80,7 +80,7 @@
             android:layout_marginRight="5dp"
             android:layout_marginBottom="8dp"
             android:background="@drawable/rectangle"
-            android:fontFamily="@font/roboto"
+            android:inputType="textPassword"
             android:textColor="#FFFFFF"
             android:textSize="20sp"
             android:textStyle="bold" />
@@ -90,7 +90,6 @@
             android:layout_height="wrap_content"
             android:layout_centerInParent="true"
             android:layout_marginBottom="8dp"
-            android:fontFamily="@font/roboto"
             android:gravity="left"
             android:text="CONFIRM PASSOWRD:"
             android:textColor="#000000"
@@ -98,7 +97,7 @@
             android:textStyle="bold" />
 
         <EditText
-            android:id="@+id/etpickup"
+            android:id="@+id/etConfirmPassword"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
@@ -106,7 +105,7 @@
             android:layout_marginRight="5dp"
             android:layout_marginBottom="8dp"
             android:background="@drawable/rectangle"
-            android:fontFamily="@font/roboto"
+            android:inputType="textPassword"
             android:textColor="#FFFFFF"
             android:textSize="20sp"
             android:textStyle="bold" />
@@ -116,7 +115,6 @@
             android:layout_height="wrap_content"
             android:layout_centerInParent="true"
             android:layout_marginBottom="8dp"
-            android:fontFamily="@font/roboto"
             android:gravity="left"
             android:text="CONTACT NO:"
             android:textColor="#000000"
@@ -124,7 +122,7 @@
             android:textStyle="bold" />
 
         <EditText
-            android:id="@+id/ettime"
+            android:id="@+id/etContact"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
@@ -132,12 +130,11 @@
             android:layout_marginRight="5dp"
             android:layout_marginBottom="8dp"
             android:background="@drawable/rectangle"
-            android:digits="0123456789"
-            android:fontFamily="@font/roboto"
             android:textColor="#FFFFFF"
             android:textSize="20sp"
             android:textStyle="bold" />
 
+        <!-- layout for register button-->
         <Button
             android:id="@+id/buttonRegister"
             android:layout_width="match_parent"
@@ -148,7 +145,6 @@
             android:layout_marginRight="75dp"
             android:layout_marginBottom="15dp"
             android:background="#F6AD1F"
-            android:fontFamily="@font/roboto_medium"
             android:text="REGISTER"
             android:textColor="@android:color/black"
             android:textSize="20sp"

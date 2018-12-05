@@ -8,6 +8,7 @@
     android:orientation="vertical"
     tools:context=".MainActivity">
 
+    <!-- Layout for application logo -->
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -24,6 +25,7 @@
             android:src="@drawable/final1" />
     </LinearLayout>
 
+    <!-- textviews and edittexts to enter username, password and button to proceed-->
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -45,6 +47,7 @@
             android:textStyle="bold" />
 
         <EditText
+            android:id="@+id/userName"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
@@ -52,6 +55,7 @@
             android:layout_marginRight="5dp"
             android:layout_marginBottom="8dp"
             android:background="@drawable/rectangle"
+            android:inputType="textPersonName"
             android:fontFamily="@font/roboto"
             android:textColor="#FFFFFF"
             android:textSize="20sp"
@@ -71,6 +75,7 @@
             android:textStyle="bold" />
 
         <EditText
+            android:id="@+id/userPassword"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
@@ -95,11 +100,12 @@
             android:textColor="@android:color/black"
             android:layout_marginLeft="75dp"
             android:layout_marginRight="75dp"
-            android:text="Login" />
+            android:text="Login"/>
 
 
     </LinearLayout>
 
+    <!-- layout to display clickable textviews-->
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"

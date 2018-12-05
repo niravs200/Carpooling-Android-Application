@@ -6,6 +6,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical">
 
+    <!-- layout to set application logo-->
     <ImageView
         android:id="@+id/imageView"
         android:layout_width="match_parent"
@@ -14,7 +15,7 @@
         android:layout_marginTop="80sp"
         android:src="@drawable/final1" />
 
-
+    <!-- textview to show waiting-->
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"

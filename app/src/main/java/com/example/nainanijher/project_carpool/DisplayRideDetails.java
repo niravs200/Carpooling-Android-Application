@@ -1,4 +1,6 @@
 package com.example.nainanijher.project_carpool;
 
-public class DisplayRideDetails {
+import android.support.v7.app.AppCompatActivity;
+
+public class DisplayRideDetails extends AppCompatActivity {
 }
