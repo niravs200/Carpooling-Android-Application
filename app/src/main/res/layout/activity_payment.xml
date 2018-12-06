@@ -5,6 +5,7 @@
     android:orientation="vertical"
     android:background="@drawable/bg_image4">
 
+    <!-- to set the header of the activity -->
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -21,6 +22,9 @@
             android:src="@drawable/final1" />
     </LinearLayout>
 
+    <!--
+        To set the payment text of the activity
+    -->
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -44,18 +48,21 @@
             android:layout_marginTop="40dp"
             />
 
-            </LinearLayout>
+    </LinearLayout>
 
     <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_weight="0.25"
         android:orientation="horizontal">
+        <!--
+            To set navigate to the next activity after payment is received
+        -->
 
         <Button
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:id="@+id/buttonReset"
+            android:id="@+id/buttonOkay"
             android:text="@string/ok"
             android:gravity="center_horizontal"
             android:layout_marginLeft="150dp"
@@ -63,7 +70,8 @@
             android:layout_marginBottom="10dp"
             android:layout_weight="0.25"
             android:textSize="20sp"
-            android:backgroundTint="@color/Yellow"/>
+            android:backgroundTint="@color/Yellow"
+           />
 
     </LinearLayout>
 

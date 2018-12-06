@@ -1,4 +1,4 @@
-package com.example.nainanijher.project_carpool;
+package com.example.jivitesh.payment;
 
 import android.content.Context;
 import android.support.test.InstrumentationRegistry;
@@ -21,6 +21,6 @@ public class ExampleInstrumentedTest {
         // Context of the app under test.
         Context appContext = InstrumentationRegistry.getTargetContext();
 
-        assertEquals("com.example.nainanijher.project_carpool", appContext.getPackageName());
+        assertEquals("com.example.jivitesh.payment", appContext.getPackageName());
     }
 }
