@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:layout_marginTop="100dp"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context=".Help"
+    tools:showIn="@layout/app_bar_home"
+    >
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="60dp"
+            android:layout_marginBottom="15dp"
+            android:layout_centerInParent="true"
+
+            android:gravity="center"
+            android:text="Help and Support"
+            android:textColor="#000000"
+            android:textSize="30sp" />
+
+    <!--
+        help content
+    -->
+
+    <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:layout_marginBottom="18dp"
+            android:layout_centerInParent="true"
+            android:textAlignment="center"
+
+
+            android:text="Carpooling lets you save travel cost by allowing you to share your ride with other poolers. You can book a ride by registering to the application. A user can share ride with others travelling along the same direction. Fare payments are made post-trip. You will be charged a fare based on the time and distance of your trip's route. Fares may vary by location, and other factors. You can contact your driver after a trip in case of misplaced or lost items. If you have any questions regarding bookings or any other concerns, please drop an email to us and we will look into it with immediate action."
+            android:textColor="#000000"
+            android:textSize="20sp" />
+
+</LinearLayout>
