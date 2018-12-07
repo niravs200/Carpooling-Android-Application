@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group android:checkableBehavior="single"/>
+
+
+    <item
+        android:id="@+id/nav_userhome"
+        android:icon="@drawable/ic_user"
+        android:title="@string/user_home" />
+    <item
+        android:id="@+id/nav_driverhome"
+        android:icon="@drawable/ic_driver"
+        android:title="@string/driver_home" />
+    <item
+        android:id="@+id/nav_help"
+        android:icon="@drawable/ic_help_black_24dp"
+        android:title="Help" />
+    <item
+        android:id="@+id/nav_tools"
+        android:icon="@drawable/ic_logout"
+        android:title="@string/logout" />
+
+
+</menu>

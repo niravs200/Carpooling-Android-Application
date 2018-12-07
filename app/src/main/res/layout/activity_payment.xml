@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/bg_image4">
+
+    <!-- to set the header of the activity -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_weight=".12"
+        android:layout_marginRight="16dp"
+        android:layout_marginLeft="16dp">
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:layout_marginTop="25sp"
+            android:src="@drawable/final1" />
+    </LinearLayout>
+
+    <!--
+        To set the payment text of the activity
+    -->
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:layout_weight=".12"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_marginBottom="8dp"
+            android:fontFamily="@font/roboto"
+            android:gravity="center"
+            android:id="@+id/paymentText"
+            android:textColor="#000000"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:layout_marginTop="40dp"
+            />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="0.25"
+        android:orientation="horizontal">
+        <!--
+            To set navigate to the next activity after payment is received
+        -->
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/buttonOkay"
+            android:text="@string/ok"
+            android:gravity="center_horizontal"
+            android:layout_marginLeft="150dp"
+            android:layout_marginRight="75dp"
+            android:layout_marginBottom="10dp"
+            android:layout_weight="0.25"
+            android:textSize="20sp"
+            android:backgroundTint="@color/Yellow"
+           />
+
+    </LinearLayout>
+
+</LinearLayout>
